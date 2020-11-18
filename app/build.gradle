@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.danspot.dsprsrvservice"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/DEPENDENCIES'
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+allprojects{
+    repositories{
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.github.pedroSG94:AutoPermissions:1.0.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+
+    implementation 'androidx.media:media:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-calendar:v3-rev235-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    //implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+//    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+//    implementation 'com.google.api-client:google-api-client-android:1.30.11'
+//    implementation 'com.google.apis:google-api-services-calendar:v3-rev411-1.25.0'
+//    implementation 'com.google.apis:google-api-services-calendar:v3-rev411-1.25.0'
+//    //noinspection GradleCompatible
+//    implementation "com.android.support:appcompat-v7:28.0.0"
+//    implementation "com.google.android.gms:play-services:12.0.1"
+
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor "org.projectlombok:lombok:1.18.16" //require for anotation
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28' // package javax.annotation does not exist solved
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.DspRsrvService.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_500"
+            app:popupTheme="@style/Theme.DspRsrvService.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--<include layout="@layout/content_main" />-->
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp" />
+    <!--android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textview_main_status"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="92dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:layout_weight="40"-->
+    <!--        android:text="" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textview_main_result"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="140dp"-->
+    <!--        android:layout_centerHorizontal="false"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginTop="150dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:layout_weight="80"-->
+    <!--        android:text="" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_main_add_calendar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="300dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:text="Add Calendar" />-->
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_main_add_event"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="400dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:text="Add Event" />-->
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_main_get_event"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="500dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:text="Get Event" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
